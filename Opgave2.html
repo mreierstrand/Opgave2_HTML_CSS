@@ -4,7 +4,6 @@
   <title>Peter Levinsky</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -24,7 +23,7 @@
   }
 
   .coursePictures {
-    width: 215px;
+    width: 230px;
   }
   
   .column {
@@ -51,10 +50,9 @@
   }
 
   .footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
-    height: 22%;
   }
 
   .column {
@@ -64,11 +62,16 @@
   }
   .column1 {
     float: left;
-    top: 5em;
-    max-width: 250px;
+    max-width: 74%;
     overflow-wrap: break-word;
-  
-    
+    max-width: 750px;
+  }
+
+  .column1Header {
+    float: left;
+    max-width: 74%;
+    overflow-wrap: break-word;
+    max-width: 750px;
   }
 
   .row:after {
@@ -76,21 +79,71 @@
   display: table;
   clear: both;
   }
+
+  .headerInColumn{
+    font-weight: 500;
+    margin-left: 15px;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
   
-  
+  @media screen and (max-width: 880px) {
+    .column {
+      width: 100%;
+    }
+    .textInHeader {
+      text-align: center;
+      margin-left: 10px;
+    }
+    
+    
+  }
+
+  @media screen and (max-width: 665px) {
+    .image {
+      display: block;
+      margin-left: 8em;
+      margin-right: auto;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .coursePictures {
+      width: 260px;
+      display: inline-block;
+      margin-bottom: 2em;
+
+    }
+    .image {
+      display: none;
+    }
+
+    .column1Header {
+      margin-top: -45%;
+    }
+
+
+  }
 
   </style>
 </head>
 <body>
 
-<div class="jumbotron text-center" style="margin-bottom:0;padding: 2em;">
-  <div>
-  <img class="image" src="/Billeder/Peter.png" alt="Billede af Peter">
+<div class="jumbotron text-center" style="margin-bottom:0;padding: 2em;background-color: lightgray;">
+  <div class="row">
+    <div class="column">
+      <img class="image" src="/Billeder/Peter.png" alt="Billede af Peter">
+    </div>
+    <div class="column1Header">
+      <h1 class="textInHeader">Peter Levinsky (PELE)</h1>
+      <p class="textInHeader">Teacher at Datamatikeruddannelsen</p>
+      <p class="textInHeader">Erhvervsakademi Zealand</p> 
+      <p class="textInHeader">Email: PELE_ATT_zealand.dk</p>
+    </div>
   </div>
-  <h1 class="textInHeader">Peter Levinsky (PELE)</h1>
-  <p class="textInHeader">Teacher at Datamatikeruddannelsen</p>
-  <p class="textInHeader">Erhvervsakademi Zealand</p> 
-  <p class="textInHeader">Email: PELE_ATT_zealand.dk</p>
+
 </div>
 
 
@@ -141,19 +194,24 @@
           <img class="coursePictures" src="/Billeder/SWC2.jpg" alt="SWC 2.semester">  
         </div>      
         <div class="column1">
-          <h3>2 Semester: Software Konstruktions-faget</h3>
+          <h3 class="headerInColumn">2 Semester: Software Konstruktions-faget</h3>
+          <h4 style="margin-bottom: 20px;margin-left: 15px;">DAT-2C</h4>
+          <h5 style="margin-bottom: 15px;margin-left: 15px" ><a href="http://pele-easj.dk/2020f-swc2/SEMESTER.htm">Link til Semester Plan (Ugeplan)</a></h5>
+          <p style="margin-left: 15px"><a href="http://pele-easj.dk/2020f-swc2/General-information.htm">Information</a> | <a href="http://pele-easj.dk/2020f-swc2/GuidelinesAndObjectives.htm"> Formål</a> | <a href="https://moodle.zealand.dk/login/index.php"> Intranet </a> </a></p>
         </div>
       </div>
-    
+
 
       <div class="row">
-
         <div class="column">
           <img class="coursePictures" src="/Billeder/Elective.jpg" alt="SWC 2.semester">  
         </div>      
         
         <div class="column1">
-          <h3>4 Semester: Elective Advanced C# Programming</h3>
+          <h3 class="headerInColumn">4 Semester: Elective Advanced C# Programming</h3>
+          <h4 style="margin-bottom: 20px;margin-left: 15px">DAT-V4-A1</h4>
+          <h5 style="margin-bottom: 15px;margin-left: 15px" ><a href="http://pele-easj.dk/2020f-AvanceretCsharp/SEMESTER.htm">Link til Semester Plan (Ugeplan)</a></h5>
+          <p style="margin-left: 15px"><a href="http://pele-easj.dk/2020f-swc2/General-information.htm">Information</a> | <a href="http://pele-easj.dk/2020f-swc2/GuidelinesAndObjectives.htm"> Formål</a> | <a href="https://moodle.zealand.dk/login/index.php"> Intranet </a> </a></p>
         </div>
 
       </div>
@@ -161,7 +219,7 @@
 
   
   <div class="footer">
-    <img src="Billeder/Zealand.jpg" alt="Zealand" style=" height:100px;width:100%;margin-top: 5rem;">
+    <img src="Billeder/Zealand.jpg" alt="Zealand" style=" height:100px;width:100%;margin-top: 5rem;border-radius: 25px;">
     <p>Maglegårdsvej 2, 4000 Roskilde, Denmark
       <span>Phone: +45 50762600 </span>
     </p>
