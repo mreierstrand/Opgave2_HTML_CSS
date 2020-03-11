@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" type="text/css" href="stylesheetEkstern.css"
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <style>
@@ -72,8 +73,12 @@
     overflow-wrap: break-word;
     max-width: 750px;
     color: white;
-    
   }
+
+  /* Skulle oprette en klasse til links under 4. Semester, Elective, så jeg specifikt kunne ændre farven til orange på a:hover */
+ .ElectiveClass {  
+   color: black;
+ }
 
   .row:after {
   content: "";
@@ -81,13 +86,14 @@
   clear: both;
   }
 
-  .headerInColumn{
-    font-weight: 500;
-    margin-left: 15px;
-  }
 
   a:hover {
     text-decoration: underline;
+    color: #99D9EA;
+  }
+
+  a.ElectiveClass:hover {
+    color: #FFC90E;
   }
   
   @media screen and (max-width: 880px) {
@@ -103,7 +109,7 @@
   @media screen and (max-width: 665px) {
     .image {
       display: block;
-      margin-left: 8em;
+      margin-left: 6em;
       margin-right: auto;
     }
   }
@@ -113,6 +119,7 @@
       width: 260px;
       display: inline-block;
       margin-bottom: 2em;
+      margin-left: 5em;
 
     }
     .image {
@@ -209,8 +216,8 @@
         <div class="column1">
           <h3 class="headerInColumn">4 Semester: Elective Advanced C# Programming</h3>
           <h4 style="margin-bottom: 20px;margin-left: 15px">DAT-V4-A1</h4>
-          <h5 style="margin-bottom: 15px;margin-left: 15px" ><a href="http://pele-easj.dk/2020f-AvanceretCsharp/SEMESTER.htm">Link til Semester Plan (Ugeplan)</a></h5>
-          <p style="margin-left: 15px;margin-bottom: 5em;"><a href="http://pele-easj.dk/2020f-swc2/General-information.htm">Information</a> | <a href="http://pele-easj.dk/2020f-swc2/GuidelinesAndObjectives.htm"> Formål</a> | <a href="https://moodle.zealand.dk/login/index.php"> Intranet </a> </a></p>
+          <h5 style="margin-bottom: 15px;margin-left: 15px" ><a class="ElectiveClass" href="http://pele-easj.dk/2020f-AvanceretCsharp/SEMESTER.htm">Link til Semester Plan (Ugeplan)</a></h5>
+          <p style="margin-left: 15px;margin-bottom: 5em;"><a class="ElectiveClass" href="http://pele-easj.dk/2020f-swc2/General-information.htm">Information</a> | <a class="ElectiveClass" href="http://pele-easj.dk/2020f-swc2/GuidelinesAndObjectives.htm"> Formål</a> | <a class="ElectiveClass" href="https://moodle.zealand.dk/login/index.php"> Intranet </a> </a></p>
         </div>
 
       </div>
